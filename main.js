@@ -314,7 +314,35 @@ else{
 //     console.log('Error message: ' + error);  
 // }
 
-//  12. Arrow function
+
+// 12. this keyword
+
+// this() inside the constructor
+// function Person() {
+
+//     this.name = 'Saran';
+//     console.log(this);
+// }
+// let person1 = new Person();
+// console.log(person1.name);
+
+// //this keywork inside the object
+// const person = {
+//     name : 'Jack',
+//     age: 25,
+//     greet() {
+//         console.log(this);
+//         console.log(this.name);
+//     }
+// }
+
+// person.greet();
+
+
+
+
+
+//  13. Arrow function
 
 // const addNumbers = (a, b) => a + b;
 // const result = addNumbers(5, 3);
