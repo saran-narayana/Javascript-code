@@ -282,7 +282,7 @@ else{
 
 
 // 11. errors
-// const numerator= 100, denominator = a;
+//  const numerator= 100, denominator = 'a';
 
 // try {  //
 //      console.log(numerator/denominator);
@@ -355,3 +355,212 @@ else{
 // //arrow function with one argument
 // const square = x => x * x;
 // console.log(square(5));
+
+
+
+
+// 14. classes - blueprints for object
+
+//with classes
+// class Person {
+//   constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//   }
+//   greet() {
+//       console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//   }
+// }
+// let person1 = new Person("Jack", 30);
+// let person2 = new Person("Tina", 33); 
+// person1.greet();
+// person2.greet();
+
+// //without classes
+
+// let person ={
+//   name:"saran",
+//   age: 23,
+//   greet: function(){
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`)
+//   }
+
+//};
+//person.greet();
+
+
+// 15. constructor- is used to create initalize objects.
+
+// function Person (){
+//   this.name='saran',
+//   this.age='23'
+// }
+// const person = new Person();
+// console.log(person.name);
+// console.log(person.age);
+
+//*multiple object wiht constructor 
+
+// function Person (){
+//   this.name = 'john',
+//   this.age = 20,
+
+//   this.greet = function (){
+//     console.log('hello');
+//   }
+// }
+
+// const person1 = new Person();
+// const person2 = new Person();
+
+// console.log(person1.name); 
+// console.log(person2.name);
+
+//*constructor function paramenter
+
+// function Person (person_name, person_age, person_gender) {
+//    this.name = person_name,
+//    this.age = person_age,
+//    this.gender = person_gender,
+
+//    this.greet = function () {
+//        return (`Hi ${this.name}`);
+//    }
+// }
+// const person1 = new Person("John", 23, "male");
+// const person2 = new Person("Sam", 25, "female");
+
+// console.log(person1.name); 
+// console.log(person2.name);
+
+//*build-in constructor
+
+// use Object()
+// const person = new Object({ name: "John", age: 30 });
+
+// // use String() 
+// const name = new String ("John");
+
+// // use Number() 
+// const number = new Number (57);
+
+// //use boolean()
+// const count = new Boolean(true);
+
+// console.log(person);
+// console.log(name);
+// console.log(number);
+// console.log(count);
+
+
+//16. Inheritance-useful feature that allows code reusability
+
+// parent class
+
+// class Person { 
+//   constructor(name) {
+//       this.name = name;
+//   }
+
+//   greet() {
+//       console.log(`Hello ${this.name}`);
+//   }
+// }
+// // inheriting parent class
+// class Student extends Person {
+// }
+// let student1 = new Student('Jack');
+// student1.greet();
+
+
+//*super() keyword
+
+// class Person { 
+//   constructor(name) {
+//       this.name = name;
+//   }
+//   greet() {
+//       console.log(`Hello ${this.name}`);
+//   }
+// }
+// class Student extends Person {
+
+//   constructor(name) {
+  
+//       console.log("Creating student class");
+      
+//       // call the super class constructor and pass in the name parameter
+//       super(name);
+//   }
+
+// }
+// let student1 = new Student('Jack');
+// student1.greet();
+
+
+
+// 17.Hoisting - function or variable
+
+    //variable hoisting - variable is declared using (var,let,const)
+
+    
+    // console.log("this is javascript");
+    // var message;
+
+    // //function hoisting-allow to call the function before its declaration
+
+    // greeting();
+
+    // function greeting(){
+    //   console.log("welcome to javascript.");
+
+    // }
+
+    // function Fruit() {
+    //   this.name ="apple",
+    //   this.rate =50;
+    // }
+
+    // const fruit = new Fruit();
+    // console.log(fruit.name);
+    // console.log(fruit.rate);
+
+
+    //18. Getter and setter
+
+          //*Getter*//
+  //   const student = {
+  //     firstName: 'Monica',
+  //     get getName() {
+  //         return this.firstName;
+  //     }
+  // };
+  
+  // console.log(student.firstName);
+  
+  // console.log(student.getName); 
+  
+  // console.log(student.getName());
+
+          //*setter*//
+//   const student = {
+//     firstName: 'Monica',
+//     set changeName(newName) {
+//         this.firstName = newName;
+//     }
+// };
+
+// console.log(student.firstName);
+
+// student.changeName = 'Sarah';
+
+// console.log(student.firstName);
+
+
+
+
+
+
+
+
+
