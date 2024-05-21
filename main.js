@@ -614,12 +614,12 @@ else{
 
 //1.set timerout()//
 
-function time() {
-  console.log('Hello world');
-}
+// function time() {
+//   console.log('Hello world');
+// }
 
-setTimeout(time, 3000);
-console.log('This message is shown first');
+// setTimeout(time, 3000);
+// console.log('This message is shown first');
 
 //cleartimerout()
 
@@ -763,7 +763,6 @@ console.log('This message is shown first');
 // var b=new B();  
 // b.display(); 
 
-//(4* Abstraction)
 
 
 
