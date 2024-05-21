@@ -135,7 +135,7 @@ else{
 
 //for loop
 // let i;
-// for (let i = -50; i < 0; i++) {
+// for (let i = 50; i > 1; i--) {
 //     console.log(i);  
 // }
 
@@ -559,20 +559,211 @@ else{
 
 // 19.Recursion
 
-function counter(count) {
+// function counter(count) {
 
-  console.log(count);
+//   console.log(count);
 
-  if(count > 1) {
+//   if(count > 1) {
 
-      count = count - 1;
-      counter(count);
-  } else {
-      return;
-  };
-};
-counter(5);
+//       count = count - 1;
+//       counter(count);
+//   } else {
+//       return;
+//   };
+// };
+// counter(5);
 
+
+//20.Spread operator
+
+//Spread operator inside array//
+// let fruits = ["Apple", "Banana", "Cherry"];
+
+// let moreFruits1 = ["Dragonfruit", fruits, "strawberry"];
+
+
+// let moreFruits2 = ["Dragonfruit", ...fruits, "strawberry"];
+
+// console.log(moreFruits1);
+// console.log(moreFruits2);
+
+//Spread operator with object
+
+// let obj1 = { x : 1, y : 2 };
+// let obj2 = { z : 3 };
+
+// let obj3 = {...obj1, ...obj2};
+
+// let obj4 = {obj1, obj2};
+
+// console.log("obj3 =", obj3);
+// console.log("obj4 =", obj4);
+
+//spread operatop as part of function argument
+
+// function sum(num1, num2 , num3) {
+//   console.log(num1 + num2 + num3);
+// }
+
+// let num1 = [1, 3, 4, 5];
+
+// sum(...num1); 
+
+
+//21.Asynchronoes - allows your code to run in the background without blocking the execution of other code.
+
+//1.set timerout()//
+
+function time() {
+  console.log('Hello world');
+}
+
+setTimeout(time, 3000);
+console.log('This message is shown first');
+
+//cleartimerout()
+
+// let count = 0 ;
+// function increaseCount(){
+
+//     count += 1;
+//     console.log(count)
+// }
+
+// let id = setTimeout(increaseCount, 3000);
+// clearTimeout(id); 
+// console.log('setTimeout is stopped.');
+
+
+//*2.callback function//
+
+// function greet(name, callback) {
+//   console.log('Hi' + ' ' + name);
+//   callback();
+// }
+
+// function callMe() {
+//   console.log('I am callback function');
+// }
+// greet('Peter', callMe)
+
+
+//3.set interval() repeats a block of code//
+
+// function greet() {
+//   console.log('Hello world');
+// }
+
+// setInterval(greet, 1000);
+
+//(2example)
+
+// function showTime() {
+//   let dateTime= new Date();
+
+//   let time = dateTime.toLocaleTimeString();
+
+//   console.log(time)
+//
+//}
+
+//(3 example)
+
+// let display = setInterval(showTime, 5000);
+
+// function greet(name, lastName) {
+//   console.log('Hello' + ' ' + name + ' ' + lastName);
+// }
+
+// setInterval(greet, 1000, 'John', 'Doe');
+
+
+
+//22.oops concepts
+
+  //(1*class)
+
+// //Declaring class  
+// class Employee  
+//   {  
+// //Initializing an object  
+//     constructor(id,name)  
+//     {  
+//       this.id=id;  
+//       this.name=name;  
+//     }  
+// //Declaring method  
+//     detail()  
+//     {  
+//   console.log(this.id+" "+this.name)  
+//     }  
+//   }  
+// //passing object to a variable   
+// var e1=new Employee(101,"Martin Roy");  
+// var e2=new Employee(102,"Duke William");  
+// e1.detail(); 
+// e2.detail();  
+
+// (1*object) ()
+
+// var emp=new Object();  
+// emp.id=101;  
+// emp.name="Ravi Malik";  
+// emp.salary=50000;  
+// console.log(emp.id+" "+emp.name+" "+emp.salary); 
+
+
+      // (2*encaplusation)
+
+// function Student(name,marks)  
+// {  
+//   var s_name=name;  
+//   var s_marks=marks;  
+//   Object.defineProperty(this,"name",{  
+//     get:function()  
+//     {  
+//       return s_name;  
+//     },  
+//   set:function(s_name)  
+//   {  
+//     this.s_name=s_name;  
+//   }  
+    
+// });  
+   
+//     Object.defineProperty(this,"marks",{  
+//     get:function()  
+//     {  
+//       return s_marks;  
+//     },  
+//   set:function(s_marks)  
+//   {  
+//     this.s_marks=s_marks;  
+//   }  
+    
+// });  
+    
+// }  
+//   var stud=new Student("John",80);  
+//   console.log(stud.name+" "+stud.marks);  
+
+
+  //(3*polymorphism)
+
+//   class A  
+//   {  
+//      display()  
+//     {  
+//       console.log("A is invoked");  
+//     }  
+//   }  
+// class B extends A  
+//   {  
+//   }  
+// var b=new B();  
+// b.display(); 
+
+//(4* Abstraction)
 
 
 
