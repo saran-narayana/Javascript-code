@@ -764,6 +764,97 @@ else{
 // b.display(); 
 
 
+// 23.Proxy -used to wrap an object and redefine various operation into object.
+
+// let student = {
+//   name: 'Jack',
+//   age: 24
+// }
+// const handler = { };
+// const proxy1 = new Proxy(student, {});
+
+// console.log(proxy1);
+// console.log(proxy1.name);
+
+//get() handler
+// let students = {
+//   name: 'Jack',
+//   age: 24
+// }
+
+// const handle = {
+//   get(obj, prop) {
+
+//       return obj[prop];
+// }
+// }
+// const proxy = new Proxy(students, handle);
+// console.log(proxy.name);
+
+//set()handler
+// let student = {
+//   name: 'John'
+// }
+// let setNewValue = {
+// set: function(obj, prop, value) {
+
+//   obj[prop] = value;
+//   return;
+// }
+// };
+// let person = new Proxy(student, setNewValue);
+// person.age = 25;
+// console.log(person);
+
+//24. Prototype
+
+// function Car() {
+//   console.log("Car instance created!");
+// };
+// Car.prototype.color = "Red";
+// Car.prototype.drive = function () {
+//   console.log(`Driving the car painted in ${this.color}...`);
+// };
+
+// console.log(`The car's color is: ${Car.prototype.color}`);
+// Car.prototype.drive();
+ 
+//prototype inheritance//
+// function Car(model, year) {
+//   this.model = model;
+//   this.year = year;
+// };
+
+// let c1 = new Car("Mustang", 1964);
+// let c2 = new Car("Corolla", 1966);
+
+// Car.prototype.color = "Red";
+
+// Car.prototype.drive = function() {
+//   console.log(`Driving ${this.model}`);
+// };
+
+// console.log(`${c1.model} color: ${c1.color}`);  
+// console.log(`${c2.model} color: ${c2.color}`);  
+// c1.drive();
+// c2.drive();
+
+// 25.modules
+
+ import{Pi, getcircumference, getArea, getVolume } from './modules.js';
+ console.log(Pi);
+
+ const circumference = getcircumference(10);
+ const area = getArea(10);
+ const volume = getVolume(10);
+
+ console.log(`${circumference.toFixed(2)}cm`);
+ console.log(`${area.toFixed(2)}cm^2`);
+ console.log(`${volume.toFixed(2)}cm^3`);
+
+
+
+
 
 
 
