@@ -1022,6 +1022,36 @@ else{
 // console.log(removedCity);
 
 
+//Problem Solving on Array method
+
+//  var is_array = function(input) {
+//   if (toString.call(input) === "[object Array]")
+//     return true;
+//   return false;   
+//     };
+// console.log(is_array('w3resource'));
+// console.log(is_array([1, 2, 4, 0]));
 
 
+//map()
+// let x = [1, 2, 3, 4];
+// console.log("Original array:")
+// console.log(x)
+// let y = x.map(i => i);
+// console.log("Clone of the said array:")
+// console.log(y);
+
+// filter()
+// let x = [1, 2, 3, 4];
+// console.log("Original array:")
+// console.log(x)
+// let y = x.filter(() => true);
+// console.log("Clone of the said array:")
+// console.log(y);
+
+// toString(),join()
+// myColor = ["Red", "Green", "White", "Black"];
+// console.log(myColor.toString());
+// console.log(myColor.join());
+// console.log(myColor.join('+'));
 
