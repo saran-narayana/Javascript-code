@@ -135,7 +135,7 @@ else{
 
 //for loop
 // let i;
-// for (let i = 50; i > 1; i--) {
+// for (let i = 50; i >= 1; i--) {
 //     console.log(i);  
 // }
 
@@ -841,19 +841,185 @@ else{
 
 // 25.modules
 
- import{Pi, getcircumference, getArea, getVolume } from './modules.js';
- console.log(Pi);
+//  import{Pi, getcircumference, getArea, getVolume } from './modules.js';
+//  console.log(Pi);
 
- const circumference = getcircumference(10);
- const area = getArea(10);
- const volume = getVolume(10);
+//  const circumference = getcircumference(10);
+//  const area = getArea(10);
+//  const volume = getVolume(10);
 
- console.log(`${circumference.toFixed(2)}cm`);
- console.log(`${area.toFixed(2)}cm^2`);
- console.log(`${volume.toFixed(2)}cm^3`);
+//  console.log(`${circumference.toFixed(2)}cm`);
+//  console.log(`${area.toFixed(2)}cm^2`);
+//  console.log(`${volume.toFixed(2)}cm^3`);
+
+//26. Array method()
+
+//1* array length
+     //syntax:Arr.lenght
+// let city = ["California", "Barcelona", "Paris", "Kathmandu"];
+// let len = city.length;
+// console.log(len);
 
 
+//2* concat()
+   //Syntax: arr.concat(value1, value2, ..., valueN)
+// let primeNumbers = [2, 3, 5, 7]
+// let evenNumbers = [2, 4, 6, 8]
+// let joinedArrays = primeNumbers.concat(evenNumbers);
+// console.log(joinedArrays);
 
+//3.constructor
+  //syntax: Arr.constructor
+  // let languages = ["JavaScript", "Java", "Python"];
+
+  // let constructor = languages.constructor;
+  // console.log(constructor);
+
+  //4.copyord);within()
+  //syntax:arr.copywithin(target,start,end)
+//   let words = ["apple", "ball", "cat", "dog"];
+//  words.copyWithin(3, 0);
+// console.log(words);
+
+//5.entries
+//syntax:Arr.entries
+// const alphabets = ["A", "B", "C"];
+// let iterator = alphabets.entries();
+// for (let entry of iterator) {
+//   console.log(entry);
+// }
+
+//6.every()
+//syntax:arr.every(callback(currentValue), thisArg)
+// function checkAdult(age) {
+//   return age >= 18;
+// }
+// const ageArray = [34, 23, 20, 26, 12]
+// let check = ageArray.every(checkAdult);
+// console.log(check);
+
+//7.fill()
+//syntax:arr.fill(value, start, end)
+// var fruits = ['Apple', 'Banana', 'Grape'];
+// fruits.fill("Cherry");
+// console.log(fruits);
+
+//8.filter()
+//syntax:arr.filter(callback(element), thisArg)
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// function checkEven(number) {
+//   if (number % 2 == 0)
+//     return true;
+//   else
+//     return false;
+// }
+// let evenNumbers = numbers.filter(checkEven);
+// console.log(evenNumbers);
+
+//9.find()
+// let numbers = [1, 3, 4, 9, 8];
+// function isEven(element) {
+//   return element % 2 == 0;
+// }
+// let evenNumber = numbers.find(isEven);
+// console.log(evenNumber);
+
+//10.findindex()
+
+// let numbers = [1, 3, 4, 9, 8];
+// function isEven(element) {
+//   return element % 2 == 0;
+// }
+// let evenNumber = numbers.find(isEven);
+// console.log(evenNumber);
+
+//11.flat()
+// let numbers = [1, 2, [3, 4, [5, 6, [7, 8]]]]; 
+// let flattenArray = numbers.flat(2);
+// console.log(flattenArray);
+
+//12.flatmap()
+// let numbers = [1, 2, 3, 4, 5];
+// const resultingArray = numbers.flatMap((x) => [x ** 2]);
+// console.log(resultingArray);
+
+//13.foreach()
+// let numbers = [1, 3, 4, 9, 8];
+// function computeSquare(element) {
+//   console.log(element * element);
+// }
+// numbers.forEach(computeSquare);
+
+//14.from()
+// let array= Array.from("JavaScript");
+// console.log(array); 
+
+//15.inculdes();
+// let languages = ["JavaScript", "Java", "C"];
+// let check = languages.includes("Java");
+// console.log(check);
+
+//16.indexof()
+// let languages = ["Java", "JavaScript", "Python", "JavaScript"];
+// let index = languages.indexOf("JavaScript");
+// console.log(index);
+
+//17. isarray()
+// let fruits = ["Apple", "Grapes", "Banana"];
+// console.log(Array.isArray(fruits));
+
+// let text = "Apple";
+// console.log(Array.isArray(text));
+
+//18.join()
+// let message = ["JavaScript", "is", "fun."];
+// let joinedMessage = message.join(" ");
+// console.log(joinedMessage);
+
+//19.keys()
+// let alphabets = ["A", "B", "C"];
+// let iterator = alphabets.keys();
+// for (let key of iterator) {
+//   console.log(key);
+// }
+
+//20.lastindexof()
+// let priceList = [10, 8, 2, 31, 10, 31, 65];
+// let lastIndex = priceList.lastIndexOf(31);
+// console.log(lastIndex); 
+
+//21.arraymap()
+// let numbers = [2, 4, 6, 8, 10];
+// function square(number) {
+//   return number * number;
+// }
+// let square_numbers = numbers.map(square);
+// console.log(square_numbers);
+
+//22.push()
+// let city = ["New York", "Madrid", "Kathmandu"];
+// city.push("London");
+// console.log(city);
+
+//23.reverse()
+// let numbers = [1, 2, 3, 4, 5];
+// let reversedArray = numbers.reverse();
+// console.log(reversedArray);
+
+//24.reduceright()
+//let numbers = [1, 2, 3, 4];
+// function sum_reducer(accumulator, currentValue) {
+//   return accumulator + currentValue;
+// }
+// let sum = numbers.reduceRight(sum_reducer);
+// console.log(sum);
+
+//25.pop()
+// let cities = ["Madrid", "New York", "Kathmandu", "Paris"];
+// let removedCity = cities.pop();
+
+// console.log(cities);   
+// console.log(removedCity);
 
 
 
