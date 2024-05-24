@@ -1055,3 +1055,219 @@ else{
 // console.log(myColor.join());
 // console.log(myColor.join('+'));
 
+
+//Arrow function
+// const orders = [  
+//   {id:1, item: "Smartphone", quantity:1},
+//   {id:2, item: "A.C", quantity:2},
+//   {id:3, item: "T.V", quantity:3},
+// ]
+
+// let result=orders.find((order) => order.id === 2)
+// console.log(result);
+
+
+
+
+//problem solving on looping
+
+//1.example
+// for(var x=0; x<=15; x++){
+// if(x === 0){
+//   console.log(x + " is even");
+// }
+// else if(x % 2 === 0){
+//   console.log(x + " is even");
+// }
+// else{
+//   console.log(x + " is old");
+// }
+// }
+
+//2.example
+// function compareNumbers(num1, num2) {
+//   if (num1 > num2) {
+//     return "The larger of " + num1 + " and " + num2 + " is " + num1 + ".";
+//   } else if (num2 > num1) {
+//     return "The larger of " + num1 + " and " + num2 + " is " + num2 + ".";
+//   } else {
+//     return "The values " + num1 + " and " + num2 + " are equal.";
+//   }
+// }
+// var result = compareNumbers(5, 8);
+// console.log(result);
+
+// result = compareNumbers(10, 5);
+// console.log(result);
+
+// result = compareNumbers(7, 7);
+// console.log(result); 
+
+//example 3
+// var a = 2154; 
+// var b = 458;  
+// var gcd;
+// while (a!=b)
+// {
+// 	if (a>b)
+// 	{
+// 		a = a -b;
+// 	}
+// 	else
+// 	{
+// 		b = b - a;
+// 	}
+// }
+// gcd = b;
+// console.log(gcd);
+
+//exapmle 4
+// var sum = 0;
+// for (var x = 0; x < 1000; x++) {
+//     if (x % 3 === 0 || x % 5 === 0) {
+//         sum += x;
+//     }
+// }
+// console.log(sum); 
+
+//exapmle 5
+// var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+// var Avgmarks = 0;
+
+// for (var i=0; i < students.length; i++) {
+//         Avgmarks += students[i][1];
+//         var avg = (Avgmarks/students.length);
+// }
+
+// console.log("Average grade: " + (Avgmarks)/students.length);
+// if (avg < 60){
+//  console.log("Grade : F");      
+//  } 
+//  else if (avg < 70) {
+// console.log("Grade : D"); 
+//  }
+//  else if (avg < 80) 
+//  {
+//  console.log("Grade : C"); 
+//   } 
+//   else if (avg < 90) {
+//   console.log("Grade : B"); 
+//   } 
+//    else if (avg < 100) {
+//    console.log("Grade : A"); 
+// }
+
+
+//oops concept
+  //1.inheritance- allow new class to inherit properties and method from existing class
+                   // (help to code reusability)
+//  class Animal{
+//   alive = true;
+
+//   eat(){
+//     console.log(`this ${this.name} is eating.`);
+//   }
+//   sleep(){
+//     console.log(`this ${this.name} is sleeping.`);
+//   }
+//  }
+//  class Rabbit extends Animal{
+//   name="rabbit";
+//   run(){
+//     console.log(`this ${this.name} is runnig`);
+//   }
+//  }
+//  class Fish extends Animal{
+//   name="fish";
+//   swim(){
+//     console.log(`this ${this.name} is swimming`);
+//   }
+//  }
+//  class Hawk extends Animal{
+//   name="hawk";
+//   fly(){
+//     console.log(`this ${this.name} is flying`);
+//   }
+//  }
+
+//  const rabbit =new Rabbit();
+//  const fish =new Fish();
+//  const hawk =new Hawk();
+
+//  console.log(fish.alive);
+//  fish.eat();
+//  fish.sleep();
+//  fish.swim();
+
+//2.Abstraction
+
+// function Employee(name, age, baseSalary){
+//   this.name = name;
+//   this.age = age;
+//   this.baseSalary = baseSalary;
+//   let monthlyBonus = 1500;
+
+//   let calculateFinalSalary = function(){
+//       let finalSalary = baseSalary + monthlyBonus;
+//       console.log ('Final Salary is : '+finalSalary);
+//   }
+
+//   this.getEmpDetails = function (){
+//       console.log ('Name : '+this.name+' | Age : '+this.age);
+//       calculateFinalSalary();
+//   }
+// }
+// let emp1 = new Employee('John', 30, 2000);
+// emp1.getEmpDetails();
+
+// console.log ('abcd');
+
+
+//3.Polymorphism - is ability to create a variable, a function, or an object that has more than one form.
+
+// class Animal{
+
+//   constructor(name){
+//       this.name = name
+//   }
+
+//   eats(){
+//       console.log (this.name+' eats food');
+//   }
+// }
+
+// class Alligator extends Animal{
+// eats(){
+//       super.eats();
+//       console.log (this.name+' eats fishes');
+//   }
+// }
+// let murphy = new Alligator('Murphy');
+// murphy.eats();
+
+// //4.Encapsulation - is a process of binding the data (i.e. variables) with the functions acting on that data.
+// class Employee{
+
+//   setEmpDetails(name, id, phoneNo){
+//       this.name = name;
+//       this.id = id;
+//       this.phoneNo = phoneNo;
+//   }
+
+//   getEmpName(){
+//       return this.name;
+//   }
+//   getEmpId(){
+//       return this.id;
+//   }
+//   getEmpPhoneNo(){
+//       return this.phoneNo;
+//   }
+
+// }
+// let emp1 = new Employee();
+// emp1.setEmpDetails('John', 1001, 987890000);
+// console.log (emp1.getEmpName());
+// console.log (emp1.getEmpId());
+// console.log (emp1.getEmpPhoneNo());
