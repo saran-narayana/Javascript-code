@@ -1271,3 +1271,262 @@ else{
 // console.log (emp1.getEmpName());
 // console.log (emp1.getEmpId());
 // console.log (emp1.getEmpPhoneNo());
+  
+
+//Problem Solving on OOPS Concept
+/*1.Write a JavaScript program to create a class called "Person" with properties for name, age and country. 
+Include a method to display the person's details. Create two instances of the 'Person' class and display their details. */
+// class Person{
+//   constructor (name,age,country){
+//     this.name = name;
+//     this.age = age;
+//     this.country=country;
+//   }
+//  displayDetails(){
+//     console.log(`Name: ${this.name}`);
+//     console.log(`Age: ${this.age}`);
+//     console.log(`Country: ${this.country}`);
+//   }
+// }
+// const person1 = new Person('Francisca Rohan', 23, 'USA');
+// const person2 = new Person('Saran', 23, 'India');
+
+// console.log('Person-1 Details:');
+// person1.displayDetails();
+
+// console.log('\n Person-2 Details:');
+//  person2.displayDetails();
+
+/*2.Write a JavaScript program to create a class called 'Rectangle' with properties for width and height.
+ Include two methods to calculate rectangle area and perimeter. Create an instance of the 'Rectangle' class and calculate its area and perimeter.*/
+
+// class Rectangle{
+//   constructor(width,height){
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   calculateArea(){
+//     return this.width * this.height;
+// }
+
+// calculatePerimeter(){
+//   return 2 * (this.width * this.height);
+// }
+// }
+// const rectangle = new Rectangle(10,20);
+
+// const area = rectangle.calculateArea();
+// const perimeter = rectangle.calculatePerimeter();
+
+// console.log(`Rectangle Area:${area}`);
+// console.log(`Rectangle Perimeter:${perimeter}`);
+
+/*3.Write a JavaScript program that creates a class called 'Vehicle' with properties for make, model, and year. 
+Include a method to display vehicle details. Create a subclass called 'Car' that inherits from the 'Vehicle' class and includes an additional property for the number of doors. 
+Override the display method to include the number of doors. */
+// class Vehicle{
+//   constructor(make, model, year){
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//   }
+
+//   displayDetails(){
+//     console.log(`Make: ${this.make}`);
+//     console.log(`Model: ${this.model}`);
+//     console.log(`Year: ${this.year}`);
+//   }
+
+// }
+// class Car extends Vehicle {
+// constructor(make, model, year, doors){
+//   super(make, model, year);
+//   this.doors = doors;
+// }
+
+// displayDetails(){
+//   super.displayDetails();
+//   console.log(`Doors: ${this.doors}`);
+// }
+// }
+
+// const vehicle = new Vehicle('Ford', 'F-150', 2020);
+// console.log('Vehile Details:');
+// vehicle.displayDetails();
+
+// const car = new Car('Honda', 'Accord', 2023, 4);
+
+// console.log('\nCar Details:');
+// car.displayDetails();
+
+/*4.Write a JavaScript program that creates a class called 'Shape' with a method to calculate the area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and override the area calculation method. 
+Create an instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class. */
+
+// class Shape {
+//   calculateArea() {
+//     throw new Error("Method 'calculateArea()' must be overridden in subclasses");
+//   }
+// }
+
+// class Circle extends Shape {
+//   constructor(radius) {
+//     super();
+//     this.radius = radius;
+//   }
+
+//   calculateArea() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
+
+// class Rectangle extends Shape {
+//   constructor(width, height) {
+//     super();
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   calculateArea() {
+//     return this.width * this.height;
+//   }
+// }
+
+// const circle = new Circle(7);
+// const circleArea = circle.calculateArea();
+// console.log(`Circle Area: ${circleArea}`);
+
+// const rectangle = new Rectangle(8, 9);
+// const rectangleArea = rectangle.calculateArea();
+// console.log(`Rectangle Area: ${rectangleArea}`);
+
+/* 5.Write a JavaScript program that creates a class called "BankAccount" with properties for account number and balance. Include methods to deposit and withdraw money from the account. 
+Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion of it.*/ 
+
+// class BankAccount {
+//   constructor(accountNumber, balance) {
+//     this.accountNumber = accountNumber;
+//     this.balance = balance;
+//     console.log(`A/c No.: ${accountNumber}`);
+//     console.log(`Opening Balance: $${balance}`);    
+//   }
+//   deposit(amount) {
+//     this.balance += amount;
+//     console.log(`Deposited: $${amount}`);
+//   }
+//   withdraw(amount) {
+//     if (amount <= this.balance) {
+//       this.balance -= amount;
+//       console.log(`Withdrawn: $${amount}`);
+//     } 
+//     else 
+//     {
+//       console.log(`Want to withdrawn: $${amount}`);
+//       console.log('Insufficient balance');
+//     }
+//   }
+//   displayBalance() {
+//     console.log(`Account Balance: $${this.balance}`);
+//   }
+// }
+// const account = new BankAccount('SB-123', 1500);
+// account.deposit(500);
+// account.withdraw(400);
+// account.displayBalance();
+// account.withdraw(1800);
+// account.displayBalance();
+
+/* 6.Write a JavaScript program that creates a class called 'Shape' with a method to calculate the area. 
+Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and override the area calculation method. 
+Create an instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.*/
+// class Shape {
+//   calculateArea() {
+//     throw new Error("Method 'calculateArea()' must be overridden in subclasses");
+//   }
+// }
+
+// class Circle extends Shape {
+//   constructor(radius) {
+//     super();
+//     this.radius = radius;
+//   }
+
+//   calculateArea() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
+
+// class Rectangle extends Shape {
+//   constructor(width, height) {
+//     super();
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   calculateArea() {
+//     return this.width * this.height;
+//   }
+// }
+// const circle = new Circle(7);
+// const circleArea = circle.calculateArea();
+// console.log(`Circle Area: ${circleArea}`);
+
+// const rectangle = new Rectangle(8, 9);
+// const rectangleArea = rectangle.calculateArea();
+// console.log(`Rectangle Area: ${rectangleArea}`);
+
+/*7. Write a JavaScript program that creates a class `Book` with properties for title, author, and publication year. 
+Include a method to display book details. Create a subclass called 'Ebook' that inherits from the 'Book' class and includes an additional property for book price. 
+Override the display method to include the book price. Create an instance of the 'Ebook' class and display its details.*/
+// class Book {
+//   constructor(title, author, publicationYear) {
+//     this.title = title;
+//     this.author = author;
+//     this.publicationYear = publicationYear;
+//   }
+// displayDetails() {
+//     console.log(`Title: ${this.title}`);
+//     console.log(`Author: ${this.author}`);
+//     console.log(`Publication Year: ${this.publicationYear}`);
+//   }
+// }
+// class Ebook extends Book {
+//   constructor(title, author, publicationYear, price) {
+//     super(title, author, publicationYear);
+//     this.price = price;
+//   }
+//   displayDetails() {
+//     super.displayDetails();
+//     console.log(`Price: $${this.price}`);
+//   }
+// }
+// const ebook = new Ebook('Don Quixote', 'Miguel de Cervantes', 1605, 21.49);
+//  ebook.displayDetails();
+
+/*8.Write a JavaScript program that creates a class called 'Animal' with properties for species and sound. 
+Include a method to make the animal's sound. Create a subclass called 'Dog' that inherits from the 'Animal' class and adds an additional property for color.
+ Override the make sound method to include the dog's color. Create an instance of the 'Dog' class and make it make its sound. */
+//  class Animal {
+//   constructor(species, sound) {
+//     this.species = species;
+//     this.sound = sound;
+//   }
+
+//   makeSound() {
+//     console.log(this.sound);
+//   }
+// }
+// class Dog extends Animal {
+//   constructor(species, sound, color) {
+//     super(species, sound);
+//     this.color = color;
+//   }
+
+//   makeSound() {
+//     super.makeSound();
+//     console.log(`Color: ${this.color}`);
+//   }
+// }
+// const dog = new Dog('Dog', 'Woof woof!', 'Brown');
+
+// dog.makeSound();
