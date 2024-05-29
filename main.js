@@ -245,10 +245,10 @@ else{
   
 
 
-// 10. type conversion //
+//10. type conversion //
  
-//Implicit conversion - automatic
-//Explicit conversion - manual
+// Implicit conversion - automatic
+// Explicit conversion - manual
 
 // let result;
 // //Implicit conversion
@@ -1530,3 +1530,419 @@ Include a method to make the animal's sound. Create a subclass called 'Dog' that
 // const dog = new Dog('Dog', 'Woof woof!', 'Brown');
 
 // dog.makeSound();
+
+//objects methods//
+
+//1.assign()  Syntax:  Object.assign(target, sources)  
+// const obj1={
+// a: 18,  
+// b: 2,  
+// c: 3  
+// };  
+
+// const obj2 = Object.assign({a: 3,c: 4, d: 5,g: 23,}, obj1);  
+
+// console.log(obj2.c, obj2.d,obj2.g,obj2.a);  
+
+
+//2.create()  Syntax: Object.create(prototype[, propertiesObject])  
+// function fruits() {  
+//   this.name = 'franco';  
+//   }  
+//  function fun() {  
+//   fruits.call(this)  
+// }  
+
+//   fun.prototype = Object.create(fruits.prototype);  
+//   const app = new fun();  
+//   console.log(app.name);
+
+
+
+
+
+
+//3.defineProperties()  Syntax:Object.defineProperties(obj, props)  
+// const obj = {};  
+// Object.defineProperties(obj, {  
+//   property1: {  
+//     value: 142,  
+//     value: 422,  
+//     value: 423,  
+//     },  
+//   property2: {  
+//   value: 22,  
+//   value: 12,}  
+// });  
+// console.log(obj.property1,obj.property2);  
+
+
+//4.defineproperty()   Syntax:Object.defineProperty(obj, prop, descriptor)  
+// const object1 = {};  
+// Object.defineProperty(object1, 'property1', {  
+//   value: 42,  
+//   value: 52,  
+//   value: 542,  
+//   });  
+// object1.property1 = 177;  
+// console.log(object1.property1); 
+
+// 5.entries  syntax:Object.entries(obj)  
+// const obj = { 10: 'arry', 21: 'barry', 23: 'carry' };  
+// console.log(Object.entries(obj)[2]);  
+
+//6.values()     Syntax:Object.values(obj)  
+// const object1 = {  
+//   a: 'Rahul',  
+//   b: 0,  
+//   c:false  
+// };  
+// console.log(Object.values(object1));  
+
+//7. is()     Syntax:Object.is(value1, value2);  
+// const object1 = {};  
+// console.log(Object.is(object1)); 
+
+//8.freeze()  syntax:Object.freeze(obj)
+// const object1 = {  
+//   property1: 22  
+// };  
+// const object2 = Object.freeze(object1);  
+// object2.property1 = 33;
+// console.log(object2.property1);
+
+
+
+
+
+
+
+//problem solving on conditional and looping statement
+
+//1.Write a JavaScript program that displays the largest integer among two integers
+// function compareNumbers(num1, num2) {
+//   if (num1 > num2) {
+//     return "The larger of " + num1 + " and " + num2 + " is " + num1 + ".";
+//   } else if (num2 > num1) {
+//     return "The larger of " + num1 + " and " + num2 + " is " + num2 + ".";
+//   } else {
+//     return "The values " + num1 + " and " + num2 + " are equal.";
+//   }
+// }
+// var result = compareNumbers(5, 8);
+// console.log(result);
+
+// result = compareNumbers(10, 5);
+// console.log(result);
+
+// result = compareNumbers(7, 7);
+// console.log(result);
+
+//2.Write a JavaScript conditional statement to find the sign of the product of three numbers. Display an alert box with the specified sign.
+// var x = -3;
+// var y = 7;
+// var z = 2;
+
+// function getSign(value) {
+//   if (value > 0) {
+//     return "+";
+//   } else if (value < 0) {
+//     return "-";
+//   } else {
+//     return "zero";
+//   }
+// }
+// var signX = getSign(x);
+// var signY = getSign(y);
+// var signZ = getSign(z);
+// var overallSign = (signX === signY && signY === signZ) ? "+" : "-";
+
+// console.log("The sign is " + overallSign); 
+
+//3.Write a JavaScript conditional statement to sort three numbers. Display an alert box to show the results
+// var x = 0;
+// var y = -1;
+// var z = 4;
+// if (x > y && x > z) {
+//     if (y > z) {
+//         console.log(x + ", " + y + ", " + z);
+//     } else {
+//         console.log(x + ", " + z + ", " + y);
+//     }
+// } else if (y > x && y > z) {
+//     if (x > z) {
+//         console.log(y + ", " + x + ", " + z);
+//     } else {
+//         console.log(y + ", " + z + ", " + x);
+//     }
+// } else if (z > x && z > y) {
+//     if (x > y) {
+//         console.log(z + ", " + x + ", " + y);
+//     } else {
+//         console.log(z + ", " + y + ", " + x);
+//     }
+// }
+
+//4.Write a JavaScript conditional statement to find the largest of five numbers. Display an alert box to show the results. 
+// var a = -5;
+// var b = -2;
+// var c = -6;
+// var d = 0;
+// var f = -1;
+
+// if (a > b && a > c && a > d && a > f) {
+//     console.log(a);
+// } else if (b > a && b > c && b > d && b > f) {
+//     console.log(b);
+// } else if (c > a && c > b && c > d && c > f) {
+//     console.log(c);
+// } else if (d > a && d > c && d > b && d > f) {
+//     console.log(d);
+// } else {
+//     console.log(f);
+// } 
+
+/*5.Write a JavaScript for loop that iterates from 0 to 15. For each iteration,
+ it checks if the current number is odd or even, and displays a message on the screen. */
+// for (var x = 0; x <= 15; x++) {
+//   if (x === 0) {
+//       console.log(x + " is even");
+//   }
+  
+//   else if (x % 2 === 0) {
+//       console.log(x + " is even");
+//   }
+  
+//   else {
+//       console.log(x + " is odd");
+//   }
+// } 
+
+/*6.Write a JavaScript program that computes the average marks of the following students. Then, this average is used to determine the corresponding grade.*/
+// var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+// var Avgmarks = 0;
+// for (var i = 0; i < students.length; i++) {
+//     Avgmarks += students[i][1];
+//     var avg = (Avgmarks / students.length);
+// }
+// console.log("Average grade: " + (Avgmarks) / students.length);
+// if (avg < 60) {
+//     console.log("Grade: F");
+// } else if (avg < 70) {
+//     console.log("Grade: D");
+// } else if (avg < 80) {
+//     console.log("Grade: C");
+// } else if (avg < 90) {
+//     console.log("Grade: B");
+// } else if (avg <= 100) {
+//     console.log("Grade: A");
+// } 
+
+/*7.Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". 
+For numbers multiples of both three and five print "FizzBuzz". */
+// for (var i = 1; i <= 15; i++) {
+//   // Check if the number is divisible by both 3 and 5
+//   if (i % 3 === 0 && i % 5 === 0) {
+//       console.log(i + " FizzBuzz");
+//   }
+
+//   else if (i % 3 === 0) {
+//       console.log(i + " Fizz");
+//   }
+//   else if (i % 5 === 0) {
+//       console.log(i + " Buzz");
+//   }
+//   else {
+//       console.log(i);
+//   }
+// } 
+
+/*8.Write a JavaScript program to construct the following pattern, using a nested for loop*/
+// var x, y, chr;
+
+// for (x = 1; x <= 6; x++) {
+
+//     for (y = 1; y < x; y++) {
+//         chr = chr + ("*");
+//     }
+//     console.log(chr);
+//     chr = '';
+// } 
+
+/*9.Write a JavaScript program to find the Armstrong numbers of 3 digits. */
+
+// function three_digit_armstrong_number() {
+//   for (var i = 1; i < 10; ++i) {
+//       for (var j = 0; j < 10; ++j) {
+//           for (var k = 0; k < 10; ++k) {
+
+//               var pow = Math.pow(i, 3) + Math.pow(j, 3) + Math.pow(k, 3);
+//               var plus = i * 100 + j * 10 + k
+//               if (pow === plus) {
+//                   console.log(pow);
+//               }
+//           }
+//       }
+//   }
+// }
+
+// three_digit_armstrong_number();
+
+
+
+//(1).prototype//
+
+//1.
+// function display(n,a){
+//   this.name=n;
+//   this.age=a;
+
+// }
+// display.prototype.year="1st year";
+// display.prototype.details=function(){
+//   return this.name +" "+this.age+" "+this.year;
+// };
+
+// var s1=new display("Saran",23);
+// var s2=new display("xyz",15);
+// console.log(s1.details());
+
+//2.
+//function Car() {
+//   this.color = "Red";
+// };
+// Car.prototype.color = "Blue";
+// Car.prototype.wheels = 4;
+
+// const c1 = new Car();
+
+// console.log(`The car's color is ${c1.color}.`); 
+// console.log(`The car has ${c1.wheels} wheels.`);
+
+//3.
+// function Employee(firstName,lastName)  
+// {  
+//   this.firstName=firstName;  
+//   this.lastName=lastName;  
+// }  
+  
+// Employee.prototype.fullName=function()  
+//   {  
+//     return this.firstName+" "+this.lastName;  
+//   }  
+  
+// var employee1=new Employee("Martin","Roy");  
+// var employee2=new Employee("Duke", "William");  
+// console.log(employee1.fullName());  
+// console.log(employee2.fullName());  
+
+
+
+//(2).constructor method//
+
+// class Employee {  
+//   constructor() {  
+//     this.id=101;  
+//     this.name = "Martin Roy";  
+//   }   
+// }  
+// var emp = new Employee();  
+// console.log(emp.id+" "+emp.name);  
+
+//example.
+// class CompanyName  
+// {  
+//   constructor()  
+//   {  
+//     this.company="Javatpoint";  
+//   }  
+// }  
+// class Employee extends CompanyName {  
+//   constructor(id,name) {  
+//    super();  
+//     this.id=id;  
+//     this.name=name;  
+//   }   
+// }     
+// var emp = new Employee(1,"John");  
+// console(emp.id+" "+emp.name+" "+emp.company);  
+
+
+
+
+//(3). static method //
+// class Test  
+// {  
+//   static display()  
+//   {  
+//     return "static method is invoked"  
+//   }  
+// }  
+// console.log(Test.display());  
+
+//example2
+// class Test  
+// {  
+//   static display()  
+//   {  
+//     return "static method is invoked"  
+//   }  
+//   static display()  
+//   {  
+//     return "static method is invoked again"  
+//   }  
+// }  
+// console.log(Test.display());  
+
+
+
+//(4).type conversion//
+
+ 
+//Implicit conversion - automatic
+//Explicit conversion - manual
+
+let result;
+//Implicit conversion
+// result = "3" + 2; 
+// console.log(result, "-", typeof(result));
+
+// result = "3" + true; 
+// console.log(result, "-", typeof(result));
+
+// result = "3" + null; 
+// console.log(result, "-", typeof(result));
+
+
+// explicit conversion
+
+let x = "k";
+let y = "pizza";
+let z = "0";
+
+
+x = Number(x);
+y = String(y);
+z = Boolean(z);
+
+console.log(x, typeof x);
+
+console.log(y, typeof y);
+
+console.log(z, typeof z);
+
+
+
+
+
+//(5).Event handling
+
+// const button = document.createElement('button');
+// button.textContent = 'Click me';
+
+// button.addEventListener('click', () => {
+//   console.log('Button clicked!');
+// });
+
+// document.body.appendChild(button);
